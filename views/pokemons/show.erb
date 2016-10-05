@@ -1,0 +1,14 @@
+<h2> All you need to know about <%=@pokemons.name %> </h2>
+<div>
+<img src="<%= @pokemons.img_url %>">
+<p><%= @pokemons.name %></p>
+<p><%= @pokemons.poke_type.upcase %></p>
+<p><%= @pokemons.cp %></p>
+</div>
+
+
+<form action ="/pokemons/<%=@pokemons.id%>" method = "post">
+  <input type ="hidden" name ="_method" value = "delete">
+
+<button type ="submit">Delete</button>
+</form>
